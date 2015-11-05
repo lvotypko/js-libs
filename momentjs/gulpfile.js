@@ -9,5 +9,6 @@ builder.defineTasks(['test', 'bundle']);
 // Bundle the module.
 //
 builder.bundle('moment', 'momentjs2')
-    .asJenkinsModuleResource()
+    .inDir('./target/classes/assets/')
+    // UNTIL js-builder is fixed: .asJenkinsModuleResource()
     .export();
